@@ -1,34 +1,44 @@
 export const MenuList = [
-    {
-        title:"Home",
-        url:'/'
-    },
-    {
-        title:"Buy Now",
-        url:'/buy_now'
-    },
-    {
-        title:"Tak Token",
-        url:'/tak_token'
-    },
-    {
-        title:"Learn More",
-        url:'/learn_more'
-    },
-    {
-        title:"Evolution Lab",
-        url:'/evolution_lab'
-    },
-    {
-        title:"Comics",
-        url:'/comics'
-    },
-    {
-        title:"Calculator",
-        url:'/calculator'
-    },
-    {
-        title:"Attributes",
-        url:'/attributes'
-    }
+    
+   { "left_side":
+    [
+        {
+            title:"Home",
+            url:'/'
+        },
+        {
+            title:"Buy Now",
+            url:'/buy_now'
+        },
+        {
+            title:"Tak Token",
+            url:'/nft-utility-token-tak'
+        },
+      
+        {
+            title:"Learn More",
+            url:'/learn_more'
+        },
+    ],
+    
+   
+        "right_side": [
+        {
+            title:"Evolution Lab",
+            url:'/nft-evolution'
+        },
+        {
+            title:"Comics",
+            url:'/comic-book'
+        },
+        {
+            title:"Calculator",
+            url:'/nft-calculator'
+        },
+        {
+            title:"Attributes",
+            url:'/attributes'
+        }
+    ]}
+    
 ]
