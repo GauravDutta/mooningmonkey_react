@@ -15,7 +15,7 @@
  font-family: 'Sansation Regular';
 }
  .profit-genrator-sec p {
-    color: #fff;
+    color: #fff  !IMPORTANT;
     font-family: 'Sansation Regular';
     font-size: 24px;
     line-height: 30px;
@@ -831,7 +831,7 @@ input::-moz-focus-outer {
     background-color: #04023200;
 }
 .staking-container p {
-    color: #fff;
+    color: #fff !important;
     font-family: 'Sansation Regular';
     font-size: 24px;
     line-height: 30px;
@@ -839,6 +839,7 @@ input::-moz-focus-outer {
     max-width: 90%;
     margin: 0 auto;
 }
+.calculator-tab .tree p.sub-head{color:#fff !important;}
 
 .staking-container * {
     padding: 0;
@@ -1189,7 +1190,7 @@ input::-moz-focus-outer {
     background-color: #04023200;
 }
 .evolution-genrator-sec p {
-    color: #fff;
+    color: #fff !important;
     font-family: 'Sansation Regular';
     font-size: 24px;
     line-height: 30px;

@@ -16,13 +16,13 @@ export default function Home() {
           duration : 1000
         });
       }, []);
-     function handleShow({description,title,except}){
+     function handleShow({poptitle,description,title,except}){
     
         
-        setState({description,title,except});
+        setState({poptitle,description,title,except});
         setShow(true);
       }
-    const getTeamdata = Team.map(({title,description,url,except},i) => {
+    const getTeamdata = Team.map(({title,poptitle,description,url,except},i) => {
        
         return(
     <div key={i} className='col-md-4'>
@@ -30,9 +30,9 @@ export default function Home() {
             <img alt='' src={url} className='img-responsive' /> 
             <h4>{title}</h4>
             <div className='team_description'>{except}... 
-                <a href='#/' className='pop-team pum-trigger' onClick={() => handleShow({description,title})} > Read more</a>
+                <a href='#/' className='pop-team pum-trigger' onClick={() => handleShow({poptitle,description,title})} > Read more</a>
             </div>
-        </div>
+        </div> 
     </div>
         );
     });
@@ -500,7 +500,7 @@ export default function Home() {
         </div>
 
         <Modal show={show} onHide={handleClose}>
-            <Modal.Body closeButton><h2 className='heading text-center'>{state.title}</h2>
+            <Modal.Body closeButton><h2 className='heading text-center'>{state.poptitle}</h2>
             <p>{state.description}</p>
             <Button variant="secondary" onClick={handleClose}>
             X
