@@ -37,7 +37,7 @@ export const MenuList = [
         },
         {
             title:"Attributes",
-            url:'/attributes'
+            url:'/Attributes'
         }
     ]}
     

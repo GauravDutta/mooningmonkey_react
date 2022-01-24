@@ -1,15 +1,21 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import {Tabs,Tab} from 'react-bootstrap'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default function Evolution() {
     const [key, setKey] = useState('home');
+	useEffect(() => {
+        AOS.init({
+          duration : 1000
+        });
+      }, []);
       return (
         <React.Fragment>
         <div className='section evolution-lab'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-12 text-center token-top-sec'>
-                        <h2 className=''>THE EVOLUTION LAB</h2>
+                    <div className='col-md-12 text-center token-top-sec' data-aos="fade-up">
+                        <h2 className='' >THE EVOLUTION LAB</h2>
                         <p className='top-50'>Evolve Your Mooning Monkeys To Gain Access To Exclusive Benefits And Of Course, Earn More Rewards!</p>
                         <p>The Mooning Monkeys NEED To Evolve In Order To Survive, Will You Help Them?</p>
                         <p className='small'>You’ll be able to evolve your Mooning Monkey 3 Times! Each evolution allowing you to earn more as an NFT Holder once the game launches.</p>
@@ -19,22 +25,22 @@ export default function Evolution() {
                     
                 </div>
                 <div className='row top-50'>
-                    <div className='col-md-3 text-center'>
+                    <div className='col-md-3 text-center' data-aos="zoom-in">
                         <h2 className='small-head'>Stage 1</h2>
                         <img src={require('../Evolution/img/stage-1.png')} className="img-responsive " alt='stage-1'/> 
                         <h2 className='small-head top-30'>Mooning Monkey</h2>
                     </div>
-                    <div className='col-md-3 text-center'>
+                    <div className='col-md-3 text-center' data-aos="zoom-in">
                         <h2 className='small-head'>Stage 2</h2>
                         <img src={require('../Evolution/img/stage-2.png')} className="img-responsive " alt='stage-1'/> 
                         <h2 className='small-head top-30'>Galactic Gorilla</h2>
                     </div>
-                    <div className='col-md-3 text-center'>
+                    <div className='col-md-3 text-center' data-aos="zoom-in">
                         <h2 className='small-head'>Stage 3</h2>
                         <img src={require('../Evolution/img/stage-2.png')} className="img-responsive " alt='stage-1'/> 
                         <h2 className='small-head top-30'>Alien Gorilla</h2>
                     </div>
-                    <div className='col-md-3 text-center'>
+                    <div className='col-md-3 text-center' data-aos="zoom-in">
                         <h2 className='small-head'>Stage 4</h2>
                         <img src={require('../Evolution/img/stage-2.png')} className="img-responsive " alt='stage-1'/> 
                         <h2 className='small-head top-30'>Eternal Yeti</h2>
@@ -46,8 +52,8 @@ export default function Evolution() {
         <div className='section game evo-tab'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-12 '>
-                    <h2 className='heading text-center'>EVOLVE NOW</h2>
+                    <div className='col-md-12 ' data-aos="zoom-in">
+                    <h2 className='heading text-center' >EVOLVE NOW</h2>
                     <p className='text-center sub-head'>Select the available evolution stage according to your Mooning Monkey NFT holding to process the evolution</p>
                         <Tabs
                             id="controlled-tab-example"
@@ -179,7 +185,7 @@ export default function Evolution() {
         <div className='container'>
                 <div className='row '>
                    
-                    <div className='col-md-12 text-center'>
+                    <div className='col-md-12 text-center' data-aos="zoom-in">
                         <h2 className='heading ' >EVOLUTION TREE</h2>
                         <p className='sub-head'>In order to achieve the top evolution, earn a spot among the 500 prestigious <b>Eternal Yeti</b> holders’s circle, and receive the highest possible amount of passive rewards, you’ll need 24 “<b>Mooning Monkeys</b>”</p>
                         <p className='sub-head top-30'>Below, you can see <b>The Evolution Tree</b>, a visual that shows you <b>EXACTLY</b> how the evolution process works:</p>

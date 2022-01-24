@@ -47,7 +47,7 @@
 }
 .section.comic-tab h2.heading {
     font-size: 60px;
-    line-height: 1em;
+    line-height: 1;
 }
 .section.comic-second{ 
     background-image: url('img/comin-4.jpg');

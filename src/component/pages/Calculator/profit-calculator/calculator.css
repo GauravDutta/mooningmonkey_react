@@ -1,0 +1,386 @@
+/* profit calculator styles */
+.profit-container {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: "Avenir Next", sans-serif;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 10px #c7c4c4; */
+    padding: 30px;
+
+}
+.profit-container * {
+    padding: 0;
+    margin: 0;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.profit-container .heading h2 {
+    text-align: center;
+    padding: 10px 20px;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0em;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 0.07em;
+    line-height: 1.2em;
+    text-transform: none;
+    color: #E343D7;
+}
+.profit-container .footer-result-sec {
+    font-size: 15px;
+    text-align: center;
+    margin: 5px 0 10px 0;
+    color: #000;
+    padding: 15px 0;
+}
+/*.profit-container .profit-generat-wrapper {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    border: 1.5px solid #512A9F;
+    padding: 15px;
+    box-shadow: 0 0 10px #512A9F;
+}*/
+.profit-container .profit-input-genrat-sec {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+    /* border: 1px solid #E343D7; */
+    border-right: none;
+    /* background-color: #fff; */
+    box-sizing: border-box;
+}
+.profit-container .profit-genrator-sec {
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+.profit-container .profit-genrator-sec label {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    
+}
+.profit-container .slider-input-sec {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+}
+.profit-container .sec-heading{
+    color: #fff;
+    font-size: 24px;
+    text-align: left;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.profit-container .sec-heading span{
+    color: #E343D7;
+    font-size: 24px;
+    font-weight: 600;
+}
+.profit-container .slider-input-sec .range {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #d5d5d5;
+    border-radius: 25px;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.profit-container .slider-input-sec .range::-moz-range-progress {
+    height: 15px;
+    border-radius: 25px;
+    background-color: #E343D7;
+}
+.profit-container .slider-input-sec .range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid #E343D7;
+    background: white;
+    -webkit-appearance: none;
+}
+.profit-container .slider-min-max{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;    
+}
+.profit-container .slider-min-max span{
+    display: inline-flex;
+    font-size: 18px;
+    color: #fff;
+}
+.profit-container .label-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.profit-container .label-container label{
+    color: #E343D7;
+}
+.profit-container .input-field {
+    width: 25%;
+    padding: 8px 5px;
+    text-indent: 5px;
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: 1px solid #E343D7;
+    box-shadow: 0 0 5px #E343D7;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff !important;
+    margin: 0;
+    text-align: right;
+}
+.profit-container .input-field:focus {
+    outline: none;
+    color: #fff !important;
+}
+
+.result-table-sec-title{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+/* / Toltip styling / */
+.profit-container .result-table{
+    width: 100%;
+    border: 1.5px solid #512A9F;
+    box-shadow: 0 0 6px #512A9F;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.profit-container .result-table thead tr:nth-child(odd){
+    background: transparent;
+}
+
+/* .result-table tr:nth-child(odd){
+    background: #030306;
+} */
+.profit-container .result-table tr:nth-child(odd){
+    background: #1C1C1E;
+}
+.profit-container .result-table th,
+.profit-container .result-table td{
+    padding: 18px 5px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-right: 1.5px solid #512A9F;
+    /* box-shadow: 0 0 5px #512A9F; */
+    box-shadow: 5px 0 5px -4px #512A9F, -5px 0 8px -4px #512A9F;
+    /* box-shadow: 2px 0 5px #512A9F; */
+    /* box-shadow: 5px 0 5px -5px #512A9F;
+    box-shadow: -5px 0 5px -5px #512A9F; */
+    width: 16.67%;
+}
+.profit-container .result-table thead th{
+    color: #E343D7;
+    /* text-shadow: 0 0 4px #E343D7; */
+    font-size: 20px;
+}
+.profit-container .total-result-label,
+.profit-container .total-result-text{
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.profit-container .total-result-label{
+    color: #E343D7;
+    text-shadow: 0 0 3px #E343D7;
+}
+.profit-container .total-result-text{
+    color: #ffff;
+    text-shadow: 0 0 3px #ffff;
+    margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+    .profit-container .profit-generat-wrapper {
+        flex-direction: column;
+    }
+    .profit-container .profit-input-genrat-sec {
+        width: 100%;
+    }
+    .profit-container h2 {
+        text-align: center;
+    }
+}
+
+.profit-container .range-slider {
+    /* margin: 60px 0 0 0%; */
+}
+
+.profit-container .range-slider {
+    width: 100%;
+}
+
+.profit-container .range-slider__range {
+    -webkit-appearance: none;
+    width: calc(100% - (73px));
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+.profit-container .range-slider__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E343D7;
+    cursor: pointer;
+    -webkit-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+}
+.profit-container .range-slider__range::-webkit-slider-thumb:hover {
+    background: #E343D7;
+}
+.profit-container .range-slider__range:active::-webkit-slider-thumb {
+    background: #E343D7;
+}
+.profit-container .range-slider__range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background: #2c3e50;
+    cursor: pointer;
+    -moz-transition: background 0.15s ease-in-out;
+    transition: background 0.15s ease-in-out;
+}
+.profit-container .range-slider__range::-moz-range-thumb:hover {
+    background: #E343D7;
+}
+.profit-container .range-slider__range:active::-moz-range-thumb {
+    background: #E343D7;
+}
+.profit-container .range-slider__range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px #E343D7;
+    transition: all .1.5s ease-in-out;
+}
+
+::-moz-range-track {
+    background: #d7dcdf;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+    border: 0;
+}
+
+
+
+
+/* /////////// */
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+.profit-container .input-container{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.profit-container .input-container input{
+    width: 100% !important;
+    padding-right: calc(20% + 5px);
+}
+.profit-container .rc-input-number-handler-wrap {
+    /* float: right; */
+    position: absolute;
+    /* border-left: 1px solid #d9d9d9; */
+    width: 20%;
+    height: 100%;
+    right: 0;
+    transition: all .3s;
+}
+.profit-container .rc-input-number-handler {
+    text-align: center;
+    line-height: 50%;
+    height: 50%;
+    overflow: hidden;
+    display: block;
+    touch-action: none;
+    position: relative;
+}
+.profit-container .rc-input-number-handler-up {
+    /* border-bottom: 1px solid #d9d9d9; */
+    padding-top: 1px;
+    transition: all .3s;
+}
+.profit-container .rc-input-number-handler-down {
+    transition: all .3s;
+}
+.profit-container .rc-input-number-handler-down-inner, 
+.profit-container .rc-input-number-handler-up-inner {
+    color: #666;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.profit-container .rc-input-number-handler-up-inner:after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5' viewBox='0 0 10 5' fill='none'%3E%3Cpath d='M0.416748 4.90473L5.00008 0.142822L9.58342 4.90473H0.416748Z' fill='%23E343D7'/%3E%3C/svg%3E");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: 44%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.profit-container .rc-input-number-handler-down-inner:after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0.0555153L5 4.91663L0 0.0555153H10Z' fill='%23E343D7'/%3E%3C/svg%3E%0A");
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: 44%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+    
+
+@media screen and (max-width: 768px){
+    .profit-container .result-table thead th {
+        font-size: 15px;
+    }
+    .profit-container .result-table th, .result-table td {
+        padding: 10px 3px;
+        
+        font-size: 10px;
+    }
+    .profit-container .total-result-label, .total-result-text {
+        font-size: 25px;
+    }
+}
+/* profit calculator style end */
