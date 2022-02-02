@@ -25,10 +25,12 @@ function Footer() {
     });
     return (
         <div className='footer'>
+         
         <div className='container'>
         <div className='row'>
             <div className='col-md-6'>
             <img src={process.env.PUBLIC_URL + '/img/logo-footer.png'} className='footer-logo img-responsive' /> 
+            <a className="whitelist-side home-pop4" href="https://gleam.io/K258w/mooning-monkey-official-whitelist-lottery" target="blank" >WHITELIST</a>
             </div> 
             <div className='col-md-6 text-right'>
             <div className='social '>

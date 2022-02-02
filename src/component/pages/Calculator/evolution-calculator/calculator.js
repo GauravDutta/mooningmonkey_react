@@ -194,10 +194,10 @@ class EvolutionCalculator extends Component {
     render(){
         return(
             <div className="evolution-container">
-               
+                
                 <div className="evolution-generat-wrapper">
                     <div className="evolution-input-genrat-sec">
-                        <div className="evolution-genrator-sec">
+                       <div className="evolution-genrator-sec">
                            <p>Use the Evolution Calculator to determine your evolution possibilities based on your initial “Mooning Monkey” holdings or the ones you plan to acquire. </p>
                             <div></div>
                         </div>

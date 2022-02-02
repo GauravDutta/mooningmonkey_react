@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { MenuList } from "./MenuList";
-import {Navbar,Container,Nav,NavDropdown,Offcanvas,Form,FormControl,Button} from 'react-bootstrap'
+import {Navbar,Container,Nav,NavDropdown,Offcanvas,Dropdown} from 'react-bootstrap'
 
 
 function NavbarMenu() {
     const [small, setSmall] = useState(false);
-
+    const [showDropdown, setShowDropdown] = useState(false);
     useEffect(() => {
         if (typeof window !== "undefined") {
           window.addEventListener("scroll", () =>
@@ -15,22 +15,78 @@ function NavbarMenu() {
         }
       }, []);
 
-    const getMenuList = MenuList[0].left_side.map(({url,title},i) => {
+    const getMenuList = MenuList[0].left_side.map(({url,title,subitem},i) => {
        
         return(
-            <li key={i}>
+            <li className="item-list" key={i}>
             
-            <Link  to={url}>{title}</Link>
+            { (subitem) ? 
+            <Dropdown
+      onMouseLeave={() => setShowDropdown(false)}
+      onMouseOver={() => setShowDropdown(true)}
+      style={{ width: '166px' }}
+    >
+      <Dropdown.Toggle
+      key={i}
+                    className="main-style"
+                    id="dropdown-basic" 
+                  >
+                    {title}
+                  </Dropdown.Toggle> 
+                  <Dropdown.Menu show={showDropdown}>
+             { subitem &&  subitem.map(({url,title},s) => {
+                return( <div key={s}>
+                  
+                  
+                
+                    <Dropdown.Item href={url}  key={s}>
+                      {title}
+                    </Dropdown.Item>
+                  
+                
+                  </div>)
+            } 
+        )  
+        }   </Dropdown.Menu>
+         </Dropdown>:  <Link  to={url}>{title}</Link>
+          }
           
             </li>
         );
     });
-    const getMenuListMobile = MenuList[0].left_side.map(({url,title},i) => {
+    const getMenuListMobile = MenuList[0].left_side.map(({url,title,subitem},i) => {
        
         return(
             <li key={i}>
             
-            <Link  to={url}>{title}</Link>
+            { (subitem) ? 
+            <Dropdown
+     
+      style={{ width: '166px' }}
+    >
+      <Dropdown.Toggle key={i}
+                    className="main-style"
+                    id="dropdown-basic"
+                  >
+                    {title}
+                  </Dropdown.Toggle> 
+                  <Dropdown.Menu show={showDropdown}>
+             { subitem &&  subitem.map(({url,title},s) => {
+                return( <div key={s}>
+                  
+            
+                
+                    <Dropdown.Item href="">
+                      {title}
+                    </Dropdown.Item>
+                  
+                
+                  </div>)
+            } 
+        )  
+        }   </Dropdown.Menu>
+         </Dropdown>:  <Link  to={url}>{title}</Link>
+          }
           
             </li>
         );

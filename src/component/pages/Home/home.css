@@ -1,3 +1,4 @@
+
 .banner-cust h1 {
     background: -webkit-linear-gradient(left,#5dc7fe,#f831ec);
     background: -o-linear-gradient(right,red,yellow);
@@ -12,6 +13,22 @@
     max-width: 1000px;
     margin: 0 AUTO;
     line-height: 1;
+}
+.section.game.co-own .tab-content {
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 10px;
+}
+iframe {
+    width: 100%;
+    height: 400px;
+}
+div#roadmap h2.heading.raodmap-small {
+    font-size: 28px !important
+}
+.roadmap p.sub-head {
+    font-size: 24px;
+    max-width: 65%;
 }
 .banner-cust p {
     margin-bottom: 30px;
@@ -62,6 +79,15 @@
     padding-bottom: 100px;
     background-color: #000000!important;
 }
+h1 {
+    background: -webkit-linear-gradient(left,#5dc7fe,#f831ec);
+    background: -o-linear-gradient(right,red,yellow);
+    background: -moz-linear-gradient(right,red,yellow);
+    background: linear-gradient(
+63deg,#5dc7fe 5%,#f831ec 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 h2 {
     background: -webkit-linear-gradient(left,#5dc7fe,#f831ec);
     background: -o-linear-gradient(right,red,yellow);
@@ -87,9 +113,17 @@ h2 {
     padding-right: 50px !important;
 }
 .pd-left-50{padding-left:50px !important;}
-
-.section h2.heading{font-size: 40px;}
+h2.heading.raodmap-small {
+    font-size: 27px !important;
+}
+#timeline-content p strong {
+    color: #f831ec;
+}
+.bottom-200{margin-bottom: 200px !important;}
+.section h2.heading{font-size: 40px !important;}
 .section h2{font-size: 28px;}
+
+
 /****home-sec-end**/
 
 /****home membership section **/
@@ -185,11 +219,34 @@ h2 {
         font-weight: 600;
         padding: 0 1rem;
     }
-
+    .dropdown-menu.show {
+        background-color: #0a58ca00 !important;
+        border:none !important;
+    }
+    .dropdown a.dropdown-item {
+        text-transform: uppercase;
+        font-size: 17px;
+        color: #f831ec !important;
+        background-color: #0000;
+    }
+    .dropdown .btn-check:focus+.btn-primary, .dropdown .btn-primary:focus {
+        color: #f831ec !important;
+        background-color: #0b5ed700;
+        border-color: #0a58ca00;
+        box-shadow:none !important;
+    }
     .tab-content p {
         color: #f832ec!important;
         font-size: 24px !important;
         line-height: 30px;
+    }
+    .show>.btn-primary.dropdown-toggle:focus {
+        box-shadow: none !important;
+    }
+.show>.btn-primary.dropdown-toggle {
+        color: #f832ec !important;
+        background-color:#0a58ca00 !important;
+        border-color: #0a58ca00 !important;
     }
     .tab-content li {
         color: #fff!important;
@@ -255,7 +312,7 @@ h2 {
     .miniting p {
              color: #fff;
         line-height: 30px;
-        font-size: 20px;
+       /* font-size: 20px;*/
         margin-left: auto;
         margin-right: auto;
     }
@@ -410,6 +467,29 @@ a.btn.btn-pink.gradient {
 }
 
 /****end token section **/
+
+button.btn.read-more {
+    background-image: url(img/downarrow.png);
+    background-repeat: no-repeat;
+    padding: 20px;
+    font-size: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-position: bottom;
+    position: relative;
+    background-color: #020119ba;
+    bottom: 40px;
+    width: 100%;
+    z-index: 99999;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+button.btn.read-more.read_less {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(120deg);
+    bottom: 0;
+}
 /**** Timeline- Raodmap section **/
 .roadmap p {
     margin-bottom: 30px;
@@ -592,6 +672,12 @@ box-shadow: 0 0 0 6px #000000;
         max-width: 960px;
         margin: 0 auto;
     }
+
+    .width-60 {
+        max-width: 800px;
+        margin-left:auto !important;
+        margin-right: auto !important;
+    }
     .team-section h4 {
         font-family: 'Sansation Regular';
         font-size: 30px;
@@ -604,6 +690,12 @@ box-shadow: 0 0 0 6px #000000;
 /****end team section **/
 
 /****home questions section **/
+
+
+.modal-body p strong {
+    font-weight: 400;
+    color:#f831ec;
+}
 .accordion-button:focus {
     box-shadow: none;
 }
@@ -614,6 +706,10 @@ box-shadow: 0 0 0 6px #000000;
     background-size: cover;
 }
 .questions h3 {
+    color: #fff;
+    margin-bottom: 50px;
+}
+.questions h4 {
     color: #fff;
     margin-bottom: 50px;
 }

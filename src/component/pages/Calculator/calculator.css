@@ -136,6 +136,9 @@ p.small-text {
 h2.heading-big {
     font-size: 85px;
 }
+h1.heading-big {
+    font-size: 85px;
+}
 .tab-content {
     border-radius: 20px 20px 20px 20px;
     overflow: hidden;

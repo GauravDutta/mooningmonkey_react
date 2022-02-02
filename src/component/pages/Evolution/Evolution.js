@@ -1,21 +1,28 @@
 import React,{useState, useEffect} from 'react'
+
 import {Tabs,Tab} from 'react-bootstrap'
+import {Helmet} from "react-helmet";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function Evolution() {
     const [key, setKey] = useState('home');
+
 	useEffect(() => {
         AOS.init({
           duration : 1000
         });
       }, []);
+	 
       return (
         <React.Fragment>
+			 <Helmet>   
+   <meta name="description" content="Mooning Monkey NFT survival will depend on their ability to evolve. Luckily, Mooning Monkeys are smart and developed an Evolution Chamber to face what’s coming and to make you earn more in this game of survival." />
+</Helmet>
         <div className='section evolution-lab'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center token-top-sec' data-aos="fade-up">
-                        <h2 className='' >THE EVOLUTION LAB</h2>
+                        <h1 className='' >THE EVOLUTION LAB</h1>
                         <p className='top-50'>Evolve Your Mooning Monkeys To Gain Access To Exclusive Benefits And Of Course, Earn More Rewards!</p>
                         <p>The Mooning Monkeys NEED To Evolve In Order To Survive, Will You Help Them?</p>
                         <p className='small'>You’ll be able to evolve your Mooning Monkey 3 Times! Each evolution allowing you to earn more as an NFT Holder once the game launches.</p>
@@ -524,58 +531,55 @@ export default function Evolution() {
 					</div>
 
                     <div className='row top-100 text-center'> 
-                    <h2 class="font-35">Get 1 Eternal Yeti</h2>
+                    <h2 className="font-35">Get 1 Eternal Yeti</h2>
                     </div>
 
                     <div className='row top-100 text-center'> 
-                    <h2 class="heading">EVOLUTION EARNINGS</h2>
-                    <p className='sub-head'>50% Of ALL Game Profit Will Be Redistributed To The Mooning Monkeys NFT Holders,
-The Image Below Shows You The Benefits Of Evolving Your Mooning Monkeys:</p>
+                    <h2 className="heading">EVOLUTION EARNINGS</h2>
+                    <p className='sub-head'>50% Of ALL Game Profit Will Be Redistributed To The Mooning Monkeys NFT Holders, The Image Below Shows You The Benefits Of Evolving Your Mooning Monkeys:</p>
 
-                        <table id="customers2">
-                        <tbody>
-                        <tr>
-                        <th>Stage</th>
-                        <th>Unit</th>
-                        <th>Remarks</th>
-                        <th>REWARDS*</th>
-                        <th>Bonus*</th>
-                        </tr>
-                        <tr>
-                        <td>Eternal Yeti</td>
-                        <td>500</td>
-                        <td>Get 1 Eternal Yeti by burning 2 Alien Gorilla</td>
-                        <td rowspan="4" class="trasn-tr">25%</td>
-                        <td>+15%</td>
-                        </tr>
-                        <tr>
-                        <td>Alien Gorilla</td>
-                        <td>1,000</td>
-                        <td>Get 1 Alien Gorilla by burning 3 Galactic Gorilla</td>
+					<table id="customers2">
+									<tbody>
+									<tr>
+									<th>Stage</th>
+									<th>Unit</th>
+									<th>Remarks</th>
+						
+									</tr>
+									<tr>
+									<td>Eternal Yeti</td>
+									<td>500</td>
+									<td>Get 1 Eternal Yeti by burning 2 Alien Gorilla</td>
+								
+									</tr>
+									<tr>
+									<td>Alien Gorilla</td>
+									<td>1,000</td>
+									<td>Get 1 Alien Gorilla by burning 3 Galactic Gorilla</td>
 
-                        <td>+7.5%</td>
-                        </tr>
-                        <tr>
-                        <td>Galactic Gorilla</td>
-                        <td>3,000</td>
-                        <td>Get 1 Galactic Gorilla by burning 4 Mooning Monkeys</td>
+									</tr>
+									<tr>
+									<td>Galactic Gorilla</td>
+									<td>3,000</td>
+									<td>Get 1 Galactic Gorilla by burning 4 Mooning Monkeys</td>
 
-                        <td>+2.5%</td>
-                        </tr>
-                        <tr>
-                        <td>Mooning Monkey</td>
-                        <td>12,000</td>
-                        <td>None</td>
+									
+									</tr>
+									<tr>
+									<td>Mooning Monkey</td>
+									<td>12,000</td>
+									<td>None</td>
 
-                        <td>0%</td>
-                        </tr>
-                        </tbody>
+								
+									</tr>
+									</tbody> 
 									</table>
 
                                   
                     </div>
-                    <div className='row top-100'>
-                            <div className='col-md-12 text-center'>  <a class="btn btn-pink gradient" href="#">CHECK OUT PROFIT CALCULATOR</a></div>
+                    <div className='row top-50 text-center'>
+						<p className='small-text'>For more information about the “Reward Methodology” please <a href="/nft-calculator/" target="blank"><b>click here</b></a></p>
+                            <div className='col-md-12 top-50 text-center'>  <a className="btn btn-pink gradient" href="#">CHECK OUT PROFIT CALCULATOR</a></div>
                         
                     </div>
 
@@ -583,7 +587,7 @@ The Image Below Shows You The Benefits Of Evolving Your Mooning Monkeys:</p>
 					
             </div>
         </div>
-     
+		
         </React.Fragment>
     ) 
 }

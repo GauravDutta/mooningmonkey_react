@@ -8,7 +8,7 @@ export const MenuList = [
         },
         {
             title:"Buy Now",
-            url:'/buy_now'
+            url:'/'
         },
         {
             title:"Tak Token",
@@ -17,7 +17,34 @@ export const MenuList = [
       
         {
             title:"Learn More",
-            url:'/learn_more'
+            url:'/',
+            subitem: [
+                {
+                    title: "Roadmap",
+                    url: "#roadmap",
+                  
+                },
+                {
+                    title: "Membership",
+                    url: "#membership",
+               
+                },
+                {
+                    title: "Team",
+                    url: "#team",
+               
+                },  
+                {
+                    title: "Faqs",
+                    url: "#faqs",
+               
+                },
+                {
+                    title: "Docs",
+                    url: "https://mooningmonkeyofficial.gitbook.io/mooning-monkey/",
+               
+                }
+              ]
         },
     ],
     
@@ -37,7 +64,7 @@ export const MenuList = [
         },
         {
             title:"Attributes",
-            url:'/Attributes'
+            url:'/nft-attributes'
         }
     ]}
     

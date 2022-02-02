@@ -1,9 +1,13 @@
 import React,{useState} from 'react'
+import {Helmet} from "react-helmet";
   
 export default function Claim() {
     const [key, setKey] = useState('home');
       return (
         <React.Fragment>
+			    <Helmet>   
+   <meta name="description" content="CLAIM YOUR MOONING MONKEY NFTs CLAIM YOUR MOONING MONKEY NFTs BY CLICKING THE BUTTON BELOW CLAIM INVESTORS PARTNERS" />
+</Helmet>
         <div className='section whitelist'>
             <div className='container'>
                 <div className='row'>
@@ -28,14 +32,13 @@ export default function Claim() {
 
 										</div>
 										<div className='row top-30'>
-										<a className='btn btn-dark' href='#'>CONNECT To   WALLET</a>
+										<a className='btn btn-dark' href='#'>Claim</a>
 
 										</div>
 										
 									
 									</div>
-									<div className='col-md-6 offset-3 text-center top-50 whitelist-text'> <p>Important notice: make sure you have enough ETH to pay for transaction gas fees.</p>
-									</div>
+									
 					</div>
 				</div>
 				<div className='row top-50 partners text-center'>
@@ -45,12 +48,13 @@ export default function Claim() {
 					
 					<div className='row col-md-10 offset-1 top-70 text-center'>
 						<div className='col-6  offset-3'>
-							<img src={require('../Whitelist/img/Beast.png')} className="img-responsive width-450" alt='paid'/> 
+						<img src={require('../Claim/img/beast.png')} className="img-responsive width-450" alt='paid'/> 
 						</div>
+						
 					</div>
 					<div className='row col-md-10 offset-1 top-70'>
 						<div className='col-6 top-20'>
-							<img src={require('../Whitelist/img/pomp.png')} className="img-responsive " alt='paid'/> 
+							<img src={require('../Claim/img/pomps.png')} className="img-responsive " alt='paid'/> 
 						</div>
 						<div className='col-6 '>
 						<img src={require('../Whitelist/img/logo-1-2.png')} className="img-responsive width-450" alt='paid'/> 

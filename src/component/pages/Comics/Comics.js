@@ -1,22 +1,39 @@
 import React,{useState, useEffect} from 'react'
-import {Tabs,Tab} from 'react-bootstrap'
+import {Helmet} from "react-helmet";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Countdowns from '../Countdowns'
+import {Tabs,Tab,Modal,Button,} from 'react-bootstrap'
 export default function Comics() {
     const [key, setKey] = useState('home');
+    const [show, setShow] = useState(false);
+    const [showMore, setShowMore] = useState(false);
+    const handleClose = () => setShow(false);
     useEffect(() => {
         AOS.init({
           duration : 1000
         });
       }, []);
+
+      function handleShow(){
+    
+
+        setShow(true);
+      }
+    const  text = `Mooning Monkeys are one of many species in the multiverse. They are an advanced race just beginning to venture out into the final frontier—space. However, before they are able to explore much of the universe, their planet is plagued by tragedies. Nature is relentless as She batters the planet with dozens of natural disasters that rips apart the landscape of the Mooning Monkey planet, rendering it nearly uninhabitable. To make matters worse, Mooning Monkeys survival seems impossible when a mysterious virus wipes out all female Mooning Monkeys. \n 
+    As if these tragedies weren’t enough, a massive, world-ending, asteroid hurtles towards the Mooning Monkey’s planet. Determined to survive, Mooning Monkey scientists and engineers rush to duplicate their greatest invention—a spaceship capable of intergalactic travel—and create as many functioning replicas as possible. They hope to escape towards safety, but they have no plan after leaving the planet. Only seventeen rocket ships are built before the asteroid picks up speed and destroys the planet. \n 
+    The survivors find themselves trapped on their uninhabitable moon, drifting in space with no orbit. They soon discover that their moon is caught by the sun’s gravity, and it is being pulled towards its fiery surface. To escape impending doom, the Mooning Monkeys dismantle most of the rocket ships to create an evolution chamber. They hope that the power of science will help their species survive, even if they look different in the future. If the experiment is a success, they can send their strongest out to seek out a habitable future and ensure the survival of the species. \n 
+    Follow the Mooning Monkeys as they assemble their evolution machine, explore an unknown planet with the Galactic Gorillas, battle hostile enemies with the Alien Gorillas, and discover the final piece of the puzzle needed to create the Eternal Yeti in this thrilling comic series!`;
       return (
         <React.Fragment>
+              <Helmet>   
+   <meta name="description" content="The Mooning Monkey NFT comic book is an action packed comic book that will reignite your love for comics and absorb you to the new world of crypto monkey comic NFTs characters" />
+</Helmet>
         <div className='section comic-bg'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center '  data-aos="fade-up">
-                        <h2 className='heading-big'>ONE COMIC, <br/>ONE EPIC SPACE ODISSEY</h2>
+                        <h1 className='heading-big'>ONE COMIC, <br/>ONE EPIC SPACE ODISSEY</h1>
                         <p className='top-50'>AN ACTION PACKED SPACE JOURNEY THAT WILL REIGNITE YOUR LOVE FOR COMIC BOOKS</p>
                         <p className='small'>GET ABSORBED INTO A WORLD OF MYSTERY, FANTASY, AND UNLIMITED ACTION!</p>
                     </div>
@@ -29,7 +46,7 @@ export default function Comics() {
                 <div className='row'>
 				<div className='col-md-12 text-center'  data-aos="fade-up"> 
 				<h2 className='heading text-center'>THE STORYLINE</h2>
-				 <a className='btn btn-pink gradient top-30' href='#'  data-aos="fade-up">READ STORYLINE</a></div>
+				 <a className='btn btn-pink gradient top-30' href='#' onClick={() => handleShow()}  data-aos="fade-up">READ STORYLINE</a></div>
 				
 				</div>
 				<div className='row top-100'>
@@ -116,7 +133,7 @@ purchase and connect your wallet.</h2>
                             <div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -126,7 +143,7 @@ purchase and connect your wallet.</h2>
 							<div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -135,7 +152,7 @@ purchase and connect your wallet.</h2>
                             <div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -162,8 +179,7 @@ purchase and connect your wallet.</h2>
 								 <Tab className='Stage1' eventKey="home"  title="Part 1">
 								 <div className='row '>
 								 <div className='col-12 text-center small-sec'>
-                                    <h2 className='sub-head '>Please select the page number you are looking to
-purchase and connect your wallet.</h2>
+                                 <img src={require('../Comics/img/comic-pdf.pdf')} className="img-responsive " alt='stage-1'/> 
 									</div>	
 									</div>
                             
@@ -172,7 +188,7 @@ purchase and connect your wallet.</h2>
                             <div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -182,7 +198,7 @@ purchase and connect your wallet.</h2>
 							<div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -191,7 +207,7 @@ purchase and connect your wallet.</h2>
                             <div className='row'>
                                         <div className='col-12 text-center'>
                                             <h2 >This part is not yet available, in the meantime, feel free to check out other gadgets such as our profit calculator:</h2>
-											<a class="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
+											<a className="btn btn-pink gradient comic-btn" href="#">CHECK OUT PROFIT CALCULATOR</a>
                                         </div> 
                                       
                                     </div>
@@ -203,7 +219,16 @@ purchase and connect your wallet.</h2>
                 </div>
             </div>
         </div>
-     
+        <Modal show={show} onHide={handleClose} >
+            <Modal.Body closeButton><h2 className='heading text-center'>The Storyline</h2>
+          
+           <p className='white-space'>{showMore ? text : text.substring(0, 250) }</p>
+<button  className={` btn read-more ${showMore ? "read_less" : "read_show"  }`} onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "Show more"}</button>
+            <Button variant="secondary" onClick={handleClose}>
+            X
+          </Button>
+            </Modal.Body>
+                </Modal>
         </React.Fragment>
     ) 
 }

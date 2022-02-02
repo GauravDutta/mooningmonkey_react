@@ -1064,10 +1064,7 @@ class ProfitCalculator extends Component {
              
                 <div className="profit-generat-wrapper">
                     <div className="profit-input-genrat-sec">
-                        <div className="profit-genrator-sec">
-                           <p>Use the Profit Calculator to determine the crazy lucrative rewards you’ll be able to generate by holding “Mooning Monkeys” and other evolution stages such as “Galactic Gorillas”,  “Alien Gorillas” and “Eternal Yetis”</p>
-                            <div></div>
-                        </div>
+                        <div class="profit-genrator-sec"><p>Use the Profit Calculator to determine the crazy lucrative rewards you’ll be able to generate by holding “Mooning Monkeys” and other evolution stages such as “Galactic Gorillas”,  “Alien Gorillas” and “Eternal Yetis”</p><div></div></div>
                         <div className="sec-heading">
                             <span>STEP 1:</span> BET SETTINGS
                         </div>

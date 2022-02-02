@@ -28,7 +28,7 @@ function App() {
     <Route path="/nft-utility-token-tak" element={<TakToken/>} />
     <Route path="/learn_more" element={<LearnMore/>} />
     <Route path="/attributes" element={<Attributes/>} /> 
-    <Route path="/attributes2" element={<Attributes2/>} />    
+    <Route path="/nft-attributes" element={<Attributes2/>} />    
     <Route path="/nft-evolution" element={<Evolution/>} />
     <Route path="/learn_more" element={<LearnMore/>} />
     <Route path="/nft-calculator" element={<Calculator/>} />   
