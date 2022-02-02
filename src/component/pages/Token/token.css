@@ -5,7 +5,12 @@
     padding-top: 270px;
     padding-bottom: 70px;    
     background-size: cover;}
-
+    .section.token-top.tok-bottom{ 
+        background-image: url('img/tokern-footer.jpg') !important;
+        padding-top:150px;
+        padding-bottom: 250px;    
+        background-size: cover;background-position: center;margin-top: -3px;}
+    
     .token-top-sec h2{    text-transform: uppercase;
         font-size: 72px;
         color: #FFFFFF!important;
@@ -118,3 +123,32 @@
         padding: 2px 24px;
     }
 /****end membership section **/
+
+@media only screen and (max-width: 767px) {
+ 
+
+.token-top-sec h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #FFFFFF!important;
+    text-align: center;
+}
+.section.token-top {
+    padding-top: 160px;
+    padding-bottom: 70px;
+    background-size: cover;
+    background-position: center;
+}
+.col-md-5 .token-img-size {
+    margin-top: 30px;
+}
+table#customers li {
+    list-style: none;
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 22px;
+}
+table#customers td {
+    font-size: 16px;
+}
+}

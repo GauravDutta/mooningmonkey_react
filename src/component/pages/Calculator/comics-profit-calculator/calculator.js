@@ -388,7 +388,7 @@ class ComicsProfitCalculator extends Component {
     render(){
         return(
             <div className="comics-profit-container">
-             
+                
                 <div className="comics-profit-generat-wrapper">
                     <div className="comics-profit-input-genrat-sec">
                         <div className="clc-top-title">

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import {Helmet} from "react-helmet";
 import {Tabs,Tab} from 'react-bootstrap'
 import StakingCalculator from './staking-calculator/calculator';
 import ComicsProfitCalculator from './comics-profit-calculator/calculator';
@@ -8,11 +9,14 @@ export default function Calculator() {
     const [key, setKey] = useState('home');
       return (
         <React.Fragment>
+                <Helmet>   
+   <meta name="description" content="The Mooning Monkey NFT Calculator will help you calculate the value of your NFT Monkey holdings. Estimate profit forecast with our NFT calculator." />
+</Helmet>
         <div className='section cal-bg'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center '>
-                        <h2 className='heading-big'>CALCULATOR</h2>
+                        <h1 className='heading-big'>CALCULATOR</h1>
                         </div>
                 </div>
                
@@ -23,7 +27,7 @@ export default function Calculator() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 '>
-						<p className='pink-col'><b>An update for the Profit and Staking calculators will take place by 25th Jan to represent the new and improved tokenomics with our “Perpetual Rewards” model and other additional features. To learn more click here.</b></p>
+						
                        <Tabs
                             id="controlled-tab-example"
                             activeKey={key}
@@ -401,7 +405,7 @@ export default function Calculator() {
                 </div>
 
 				<div className='row top-100 text-center'> 
-                    <h2 class="heading">REWARD DISTRIBUTION MODEL</h2>
+                    <h2 className="heading">REWARD DISTRIBUTION MODEL</h2>
                     <p className='sub-head'>50% of all Game Profit will be redistributed To The Mooning Monkeys NFT holders based on both the "Evolution Levels" and "Rarity Traits" of the NFTs they own.</p>
 
                         <table id="customers2">

@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react'
+import {Helmet} from "react-helmet";
 import {Tabs,Tab,Modal,Button,} from 'react-bootstrap'
 import Accordion from 'react-bootstrap/Accordion'
 import {Team} from './data/team'
@@ -6,12 +7,25 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './home.css';
 import Countdowns from '../Countdowns'
+
+
+
 export default function Home() {
+    const [isOpen, setOpen] = useState(false)
     const [key, setKey] = useState('home');
     const [show, setShow] = useState(false);
     const [state, setState] = useState('');
     const handleClose = () => setShow(false);
+
+    const [showVideo, setVideoShow] = useState(false);
+
+    const handleVideoClose = () => setVideoShow(false);
+    
+
     useEffect(() => {
+        setTimeout(()=>{
+            setVideoShow(true)
+           }, 1500) 
         AOS.init({
           duration : 1000
         });
@@ -28,6 +42,7 @@ export default function Home() {
     <div key={i} className='col-md-4'>
         <div className='team-section'>
             <img alt='' src={url} className='img-responsive' /> 
+           
             <h4>{title}</h4>
             <div className='team_description'>{except}... 
                 <a href='#/' className='pop-team pum-trigger' onClick={() => handleShow({poptitle,description,title})} > Read more</a>
@@ -38,20 +53,25 @@ export default function Home() {
     });
     return (
         <React.Fragment>
+             <Helmet>
+   
+        <meta name="description" content="Mooning Monkey NFTs represent a unique NFT Monkey collection made of rare NFT Monkey art. Onboard this epic NFT space journey to reach the Moon and beyond." />
+    </Helmet>
         <div className='section top banner-cust'>
             <div className='container'>
                 <div className='col-md-12 text-center ' data-aos="fade-up">
+               
                     <h1 >ONBOARD THE GREATEST SPACE MISSION OF ALL TIME!</h1>
                     <p>Save The Mooning Monkeys From Imminent Extinction. Earn Astronomical Rewards, Exclusive Membership Privileges & A Lifetime Source Of Passive Income.</p>
                     <p>Join <strong>The Mooning Monkeys</strong> on their epic space journey, an <strong>Exclusive NFT Project</strong> featuring art from another world, and<strong> Unrivalled-Utility</strong> from galaxies far beyond.</p>
                     <p>Co-own and profit from the revisited and revamped famous <strong>Crash Game</strong>, be one of the first to own an <strong>Epic Sci-Fi Comic Book</strong> in <strong>NFT</strong> format, and become a proud owner of one of the most <strong>Stylish, Rare, And Utility-Packed NFT’s</strong>.</p>
                 </div>
                 <div className='col-md-12 text-center'>
-                    <a href='#/' className='btn btn-pink'>JOIN TELEGRAM</a>
-                    <a href='#/' className='btn btn-pink'>JOIN DISCORD</a>
-                    <a href='#/' className='btn btn-dark'>BUY NOW</a>
-                    <a href='#/' className='btn btn-dark'>ONE PAGER</a>
-                    <a href='#/' className='btn btn-dark'>PROFIT CALCULATOR</a>
+                    <a href='https://t.me/MooningMonkeyOfficial' className='btn btn-pink' target='blank'>JOIN TELEGRAM</a>
+                    <a href='https://discord.com/invite/mooningmonkeyofficial' className='btn btn-pink' target='blank'>JOIN DISCORD</a>
+                    <a href='#miniting' className='btn btn-dark'>BUY NOW</a>
+                
+                    <a href='/nft-calculator' className='btn btn-dark'>PROFIT CALCULATOR</a>
                 </div>
             </div>            
         </div> 
@@ -67,12 +87,12 @@ export default function Home() {
                         <p><strong>Mooning Monkeys</strong> HATE Being Boring Copies Of Each Other,</p>
                         <p>This epic space journey is going to begin with <strong>12,000</strong> exciting, unique, and valuable mooning monkeys being sent to the moon and beyond.</p>
                         <p>They will have to evolve to survive, reducing their population to only <strong>500 Elite Beings</strong> that are infinitely more powerful, and of course, more <strong>Valuable</strong>.</p>
-                        <p><strong>Unique, Distinct, Rare, And Valuable! </strong>All <strong>Mooning Monkeys</strong> are unique crypto heroes that have been drilled around <strong>239 DISTINCTIVE TRAITS</strong> which define their rarity, and their value.</p>
+                        <p><strong>Unique, Distinct, Rare, And Valuable! </strong><br/>All <strong>Mooning Monkeys</strong> are unique crypto heroes that have been drilled around <strong>239 DISTINCTIVE TRAITS</strong> which define their rarity, and their value.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div className='section game'>
+        <div className='section game co-own'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 '>
@@ -118,7 +138,7 @@ export default function Home() {
                                 <div className='col-md-6'>
                                     <img src={process.env.PUBLIC_URL + '/img/mob-lap-13-bg.png'} className='img-responsive' alt="logo" />
                                 </div>
-                                <a className='btn btn-pink gradient top-50' href='/nft-calculator/'>PROFIT CALCULATOR</a>
+                                <a className='btn btn-pink gradient top-50' href='/nft-calculator'>PROFIT CALCULATOR</a>
                                 
                                 </div>
                             </Tab>
@@ -129,12 +149,12 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='section miniting'>
+        <div className='section miniting' id='miniting'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 '>
                     <h2 className='heading text-center'>MINTING</h2>
-                    <h3 className=' text-center' data-aos="zoom-in"><b>AUCTION COMING SOON…</b></h3>
+                    <h3 className=' text-center' data-aos="zoom-in"><b>THE DUTCH AUCTION WILL START ON 31 JANUARY 2022, 7PM EST</b></h3>
                     <p className=' text-center' data-aos="zoom-in">A Dutch Auction a method of selling in which the price is reduced until a buyer is found.</p>
                         <Tabs
                             
@@ -150,7 +170,7 @@ export default function Home() {
                                 </div>
 
                                 <div className='col-md-6 text-center box ' data-aos="zoom-in">
-                                    <h2 className='small-heading'>VISIT  THE MINT AUCTION PAGE BY CLICKING THE BUTTON BELOW</h2>
+                                    <h2 className='small-heading'>VISIT THE MINT AUCTION PAGE BY CLICKING THE BUTTON BELOW</h2>
                                     <img src={process.env.PUBLIC_URL + '/img/mooning-img.png'} className='img-responsive' alt="logo" />
                                     <a className='btn btn-dark' href='#/'>VISIT MINT AUCTION (Comming Soon)</a>
                                 
@@ -163,12 +183,12 @@ export default function Home() {
                                 <div className='col-md-12'>
                                 <p className='white'>Here are the parameters of the Mooning Monkey Dutch Auction</p>
                                 <ul>
-                                        <li>Starting Price = TBR</li>
+                                        <li>Starting Price = 1.5 ETH</li>
                                         <li>Price drops by = 0.01 ETH until sold out or reaches 0.15ETH floor</li>
-                                        <li>Price Drop Frequency = 7min</li>
-                                        <li>Time to reach floor = 7min x 85 price drops = 595 min = 9h55 min</li>
-                                        <li>Max Mint Quantity = 12 per wallet for first 4h. Then unlimited starting 11pm UTC</li>
-                                        <li>End Time = 24h</li>
+                                        <li>Price Drop Frequency = 6min</li>
+                                        <li>Time to reach floor = 6min x 135 price drops = 810 min = 13h30 min</li>
+                                        <li>Max Mint Quantity = 12 per wallet for first 4h. Then unlimited starting 11pm EST</li>
+                                        <li>Decrease End Time = 213h30 min</li>
                                         </ul>
                                 <p className='pink'>IMPORTANT</p>
                                 <ul>
@@ -206,7 +226,7 @@ export default function Home() {
         
 
 
-        <div className='section memebership'>
+        <div className='section memebership' id='membership'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center'>
@@ -254,7 +274,7 @@ export default function Home() {
                     <p>The <strong>Mooning Monkeys</strong> will go through 3 stages of evolution using an advanced technology they’ll find during their travels,</p>
                     <p>Going from <strong>Ordinary Mooning Monkeys</strong>, to <strong>Galactic Gorillas</strong>, to <strong>Alien Gorillas</strong>, to the final stage of <strong>Eternal Yetis</strong>. The more evolved your <strong>Mooning Monkey</strong> is, the more rewards and opportunities you’re going to get.</p>
                     <p>These <strong>500 Chosen Mooning Monkeys</strong> will eternally live on the <strong>Ethereum Blockchain</strong>, travelling deep space, going on adventures, and constantly providing you with passive rewards.</p>
-                    <a className='btn btn-pink gradient' href='#/'>VISIT EVOLUTION LAB</a>
+                    <a className='btn btn-pink gradient' href='/nft-evolution'>VISIT EVOLUTION LAB</a>
                     </div>
                 </div>
             </div>
@@ -270,7 +290,7 @@ export default function Home() {
                     <div className='col-md-6 text-right right-50'>
                     <p>The amazing and intriguing <strong>Mooning Monkey Space Odyssey</strong> will be released into 4 comic books of 14 pages. If you want to receive a special surprise, you just need to be one of the first 10 people to own the full 14 pages of any chapter, trust us, you won’t be disappointed.</p>
                     <p>Additionally, owning a full comic will unlock exclusive privileges in the future, and as much as we’d love to tell you what they are, we can’t reveal them just yet.</p>
-                        <a className='btn btn-pink gradient' href='#/'>CHECK OUT  COMIC PAGE</a>
+                        <a className='btn btn-pink gradient' href='/comic-book'>CHECK OUT  COMIC PAGE</a>
                     </div>
                     <div className='col-md-6 left-80'>
                         <img src={process.env.PUBLIC_URL + '/img/comic.png'} className='img-responsive' />
@@ -294,7 +314,7 @@ export default function Home() {
                     <p>We are building a galactical ecosystem that will handsomely reward <strong>ALL</strong> participants. By simply holding any of the evolution <strong>NFT’s</strong>, you’ll receive daily <strong>Takion Tokens ($TAK)</strong></p>
                     <p>You’ll be able to Yield, stake, evolve earn extra rewards and much more… All of which will <strong>EARN YOU MONEY</strong>, passively, without requiring any extra effort.</p>
                     <p>Sounds pretty great, doesn’t it?</p>
-                    <a className='btn btn-pink gradient' href='#/'>TOKEN UTILITY OVERVIEW</a>
+                    <a className='btn btn-pink gradient' href='/nft-utility-token-tak'>TOKEN UTILITY OVERVIEW</a>
                     </div>
                 </div>
             </div>
@@ -311,7 +331,7 @@ export default function Home() {
                     <p>These surprises will be announced along with the pre and post roadmap launch of the game. These surprises range from airdrops, to winning prizes, to massive project developments.</p>
                     <p>In order to have access to the surprises, all you need to do is own a <strong>Mooning Monkey</strong>, if you don’t already own one, click <a href="#mint"><strong>HERE</strong> </a>to get your own <strong>Mooning Monkey</strong>.</p>
                     <p><strong>P.S.</strong> There won’t be another sequel. If you want to be a part of this journey, you need to start minting As <strong>Soon As Possible</strong>.</p>
-                        <a className='btn btn-pink gradient' href='#/'>CHECK OUT ROADMAP</a>
+                        <a className='btn btn-pink gradient' href='/#roadmap'>CHECK OUT ROADMAP</a>
                     </div>
                     <div className='col-md-6 left-80'>
                         <img src={process.env.PUBLIC_URL + '/img/surprises.png'} className='img-responsive' />
@@ -319,12 +339,12 @@ export default function Home() {
                 </div>
             </div>
         </div>
-        <div className='section roadmap'>
+        <div className='section roadmap' id='roadmap'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-12 text-center'>
                         <h2 className='heading '>THE ROADMAP</h2>
-                        <h2 className='heading small bot-50'>JOIN US ON THE JOURNEY TO SPACE</h2>
+                        <h2 className='heading raodmap-small bot-50'>JOIN US ON THE JOURNEY TO SPACE</h2>
                         <p className='sub-head '>Everything You Need To Know About The Epic Space Journey Your Mooning Monkeys Are About To Go On, Before They Take Off:</p>
                     </div>
                 </div>
@@ -369,48 +389,111 @@ export default function Home() {
                     <ul className='timeline'>
                         <li className='event'><h3> The Post-Launch</h3>
                     </li>
-                    <li className='event aos-init' data-aos='fade-up'>
+                    <li className='event aos-init' data-date='Q4 2021' data-aos='fade-up'>
                     <div><ul>
-                                <li>Tokenomics V2 release: Full Economy Paper</li>
                                 <li>Game screenshot sneak peeks will get everyone excited for the full game launch</li>
                                 <li>Comic Book pages preview will get everyone wondering how the story will unfold...</li>
                             </ul></div>  
-                    <img src={process.env.PUBLIC_URL + '/img/rocket-1.png'} className='img-responsive' />     
+                    <img src={process.env.PUBLIC_URL + '/img/m-1.png'} className='img-responsive' />     
                     </li>
                     <li className='event aos-init' data-date='Q1 2022' data-aos='fade-up'>
                     <div className='second-time'>
-                        <ul><li>End Jan- Early Feb: The release of the 1st comic book part that will get the entire crypto and NFT space talking Mooning Monkeys</li><li>NFT evolution collection releases for Galactic Gorillas and Alien Gorillas  </li>
+                        <ul>
+                            <li><strong>The beginning of an extensive promotional campaign spearheaded by exclusive partnerships with well-renowned artists and global celebrities to further strengthen our Mooning Monkey community.</strong></li>
+                            <li>Mid-end Jan: Tokenomics V2 update on our Gitbook documentation for better reward model for the community and project as a whole.</li><li>Mid Feb $TAK IDO </li>
+                            <li>Mid Feb: The release and INO of the 1st comic book part that will get the entire crypto and NFT space talking Mooning Monkeys</li>
+                            <li>NFT evolution collection releases for Galactic Gorillas and Alien Gorillas</li>
                             <li>Certik Audit, a partnership which will ensure that all smart contracts are safe and secure.</li>
                             <li>Game V1 launch</li>
-                            <li>Release of the the 2nd comic part</li>
+                            <li>Release and INO of the the 2nd comic part.</li>
                         </ul></div> 
-                            <img src={process.env.PUBLIC_URL + '/img/certik.png'} className='img-responsive' /> 
+                            <img src={process.env.PUBLIC_URL + '/img/rocket-1.png'}  className='img-responsive bottom-200' /> 
                     </li>
                     <li className='event aos-init' id='date' data-date='Q2 2022' data-aos='fade-up'>
-                    <div><ul><li>Game V1.2 launch</li>
-                            <li>Release of the the 3rd comic part </li>	
+                    <div><ul><li>Final NFT evolution collection release Eternal Yetis (with a Surprise)</li>
+                            <li>Release and INO of the the 3th comic part</li>	
+                            <li>New game announcement. Something BIG!</li>
                             </ul></div>
-                            <img src={process.env.PUBLIC_URL + '/img/rocket-1.png'} className='img-responsive' /> 
+                            <img src={process.env.PUBLIC_URL + '/img/m-3.png'} className='img-responsive' /> 
                     </li>
                     <li className='event aos-init' id='date' data-date='Q3 2022' data-aos='fade-up'>
-                    <div><ul><li>Final NFT evolution collection release Eternal Yetis (with a Surprise)</li>
-                            <li>Release of the the 4th comic part </li>	
+                    <div><ul><li>Release and INO of the the 4th comic part</li>
+                            <li>V2 of the Mooning Monkey Game release</li>	
                             </ul></div>
-                            <img src={process.env.PUBLIC_URL + '/img/roadmap-ttt.png'} className='img-responsive' /> 
+                            <img src={process.env.PUBLIC_URL + '/img/m-4.png'} className='img-responsive' /> 
                     </li>
-                    <li className='event aos-init' id='date' data-date='Q4 2022' data-aos='fade-up'>
-                    <div><ul><li>V2 of the Mooning Monkey Game release.</li>	
-                            </ul></div>       
-                    </li>
-                    
+                   
                     </ul>
+                    <p className='text-center'> <strong>“Roadmap is subject to changes. This is just an indication in time of some of the major events ahead.”</strong></p>
                     </div>
                 </div>
             </div>
         </div>
         <div className='section team'>
             <div className='container'>
-                <div className='row'>
+            <div className='row top-50 partners text-center'>
+					<div className='col-md-12 top-50 text-center'>
+						<h2 className="heading ">INVESTORS</h2>
+					</div>					
+					
+					<div className='row col-md-10 offset-1 top-70 text-center'>
+						<div className='col-6  offset-3' data-aos="fade-up">
+							<img src={require('../Whitelist/img/beast.png')} className="img-responsive width-450" alt='paid'/> 
+						</div>
+					</div>
+					<div className='row col-md-10 offset-1 top-70'>
+						<div className='col-6 top-20' data-aos="fade-left">
+							<img src={require('../Whitelist/img/pomps.png')} className="img-responsive " alt='paid'/> 
+						</div>
+						<div className='col-6 ' data-aos="fade-right">
+						<img src={require('../Whitelist/img/logo-1-2.png')} className="img-responsive width-450" alt='paid'/> 
+						</div>
+					</div>
+            	</div>
+                <div className='row top-50 partners text-center'>
+					<div className='col-md-12 top-50 text-center'>
+						<h2 className="heading ">PARTNERS</h2>
+					</div>
+					
+					<div className='row col-md-10 offset-1 top-70'>
+						<div className='col-6 ' data-aos="fade-left">
+							<img src={require('../Whitelist/img/paid.png')} className="img-responsive " alt='paid'/> 
+						</div>
+						<div className='col-6 ' data-aos="fade-right">
+						<img src={require('../Whitelist/img/master.png')} className="img-responsive width-450" alt='paid'/> 
+						</div>
+					</div>
+					<div className='row col-md-10 offset-1 top-70 text-center'>
+						<div className='col-6  offset-3' data-aos="fade-up">
+							<img src={require('../Whitelist/img/apotte.png')} className="img-responsive width-450" alt='paid'/> 
+						</div>
+					</div>
+					
+            	</div>
+
+                <div className='row top-100'>
+                    <div className='col-md-12 text-center'>
+                        <h2 className='heading '>ADVISORS</h2>
+                        <h3 className=' text-center' data-aos="fade-up"><b>Meet our advisors</b></h3>
+                        <div className='row width-70 top-70' data-aos="fade-up">
+                           <div className='offset-md-4 col-4 text-center'>
+                           <img src={require('../Home/img/adviser.png')} className="img-responsive " alt='stage-1'/> 
+                           </div>
+                        </div>
+
+                        <div className='row width-60 top-70' data-aos="fade-up">
+                         <div className='col-md-6'>
+                            <img src={require('../Home/img/latitiude.png')} className="img-responsive " alt='stage-1'/> </div>
+                        <div className='col-md-6'>
+                            <img src={require('../Home/img/plutusvs.png')} className="img-responsive " alt='stage-1'/> 
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className='row top-100' id='team'>
                     <div className='col-md-12 text-center'>
                         <h2 className='heading '>DEGEN MONKEY LAUNCHERS</h2>
                         <h3 className=' text-center' data-aos="fade-up"><b>Meet the team</b></h3>
@@ -425,12 +508,12 @@ export default function Home() {
             </div>
         </div>
 
-        <div className='section questions'>
+        <div className='section questions' id='faqs'>
             <div className='container'>                
                 <div className='row top-50'>
                     <div className='col-md-6 '>
                     <h2 className=''>QUESTIONS?</h2>
-                    <h3>WE HAVE THE ANSWERS</h3>
+                    <h4>WE HAVE THE ANSWERS</h4>
                     <p>Or reach us on social media:</p>
                     <div className='social '>
                     <a href='https://t.me/MooningMonkeyOfficial' target='blank' rel='noopener'>
@@ -465,14 +548,14 @@ export default function Home() {
                             <Accordion.Header>WHEN CAN I MINT?</Accordion.Header>
                             <Accordion.Body>
                                 <p>We’re just as excited to get this started as you are, but we want to make sure that everything is <strong>PERFECT</strong> before the launch.</p>
-                            <p>The date of the Dutch Auction will be announced soon and will occur in January based on the following Dutch Auction parameters:</p>
+                            <p>The Date and time for the start of the Dutch Auction as been set to 31 January 2022 at 7PM EST</p>
                             <ul>
                                 <li><strong>Starting Price</strong> = TBR</li>
                                 <li><strong>Price drops by</strong> = 0.01 ETH until sold out or reaches 0.15ETH floor</li>
-                                <li><strong>Price Drop Frequency</strong> = 7min</li>
-                                <li><strong>Time to reach floor</strong> = 7min x 85 price drops = 595 min = 9h55 min</li>
+                                <li><strong>Price Drop Frequency</strong> = 6min</li>
+                                <li><strong>Time to reach floor</strong> = 6min x 135 price drops = 810 min = 13h30 min</li>
                                 <li><strong>Max Mint Quantity</strong> = 12 per wallet for first 4h. Then unlimited starting 11pm UTC</li>
-                                <li><strong>End Time</strong> = 24h</li>
+                                <li><strong>Decrease End Time</strong> = 13h30 min</li>
                                 </ul>
                             </Accordion.Body>
                         </Accordion.Item>
@@ -501,13 +584,33 @@ export default function Home() {
 
         <Modal show={show} onHide={handleClose}>
             <Modal.Body closeButton><h2 className='heading text-center'>{state.poptitle}</h2>
-            <p>{state.description}</p>
+           {state.description}
             <Button variant="secondary" onClick={handleClose}>
             X
           </Button>
             </Modal.Body>
                 </Modal>
-     
+             
+
+                    <Modal
+        show={showVideo}
+        onHide={handleVideoClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+    
+        </Modal.Header>
+        <Modal.Body>
+        <video   preLoad="auto"
+  loop  autoPlay={true} muted width="750" height="500" controls >
+<source src="https://mooningmonkey.com/wp-content/uploads/2022/01/Mooning%20Monkey%20NFTs%20-%20Project%20Overview%20-%20Ecosystem%20Presentation.mp4" type="video/mp4"/>
+</video>
+        </Modal.Body>
+      
+      </Modal>
+               
+               
         </React.Fragment>
     ) 
 }

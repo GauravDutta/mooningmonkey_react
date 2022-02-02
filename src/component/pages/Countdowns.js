@@ -4,7 +4,7 @@ export default function Countdowns() {
   
     const calculateTimeLeft = () => {
         let year = new Date().getFullYear();
-        let difference = +new Date(`02/01/${year}`) - +new Date();
+        let difference = +new Date(`02/17/${year}`) - +new Date();
       
         let timeLeft = {};
       
@@ -37,14 +37,14 @@ Object.keys(timeLeft).forEach((interval) => {
   }
 
   timerComponents.push(
-    <div className='timer-sec'>
+    <div className='timer-sec' key={interval}>
       {timeLeft[interval]} <span>:</span> <div className='timer-text'>{interval}</div>{" "}
     </div>
   );
 });
     return (
         <React.Fragment>
-       {timerComponents.length ? timerComponents : <span>Time's up!</span>}     
+         {timerComponents.length ? timerComponents : <span>Time's up!</span>}     
         </React.Fragment>
     )
 }

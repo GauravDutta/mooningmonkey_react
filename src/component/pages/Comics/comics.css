@@ -7,6 +7,11 @@
     background-size: cover;
     background-position: center;
 }
+p.comic-small {
+    font-size: 16px;
+    line-height: 23px;
+}
+
 .game.comic-tab .tab-content p.white-text {
     color: #fff !important;
 }
@@ -48,6 +53,16 @@
 .section.comic-tab h2.heading {
     font-size: 60px;
     line-height: 1;
+}
+.section.game.evo-tab.comic-tab{ 
+    background-image: url('img/sec-4-bg.jpg')  !important;
+     padding-top: 70px;
+     padding-bottom: 70px;    
+     background-size: cover;
+     background-position: center;
+ }
+ .section.game.evo-tab.comic-tab .tab-content h2.heading {
+    font-size: 60px !important;
 }
 .section.comic-second{ 
     background-image: url('img/comin-4.jpg');
@@ -104,8 +119,12 @@
 .inner-box {
     position: relative;
 }
-h2.heading-big {
+h1.heading-big {
     font-size: 85px;
+}
+.white-space{
+    white-space: pre-line;
+    font-size: 14px;
 }
 .tab-content {
     border-radius: 20px 20px 20px 20px;

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Whitelist from './Whitelist';
 import './whitelist.css';
 

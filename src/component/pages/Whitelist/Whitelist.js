@@ -1,10 +1,14 @@
 import React,{useState} from 'react'
 import {Tabs,Tab} from 'react-bootstrap'
+import {Helmet} from "react-helmet";
  
 export default function Whitelist() {
     const [key, setKey] = useState('home');
       return (
         <React.Fragment>
+			 <Helmet>   
+   <meta name="description" content="ACCESS YOUR WHITELIST SPOT MOONING MONKEYWHITELIST SPOT Press the connect wallet button to claim and pay for your Whitelist spot. Mooning Monkey Price 0.15 ETH 2’500 remaining 1 0.15 ETH max Total 0.15 ETH CONNECT WALLET Important notice: make sure you have enough ETH to pay for transaction gas fees. " />
+</Helmet>
         <div className='section whitelist'>
             <div className='container'>
                 <div className='row'>
@@ -57,12 +61,12 @@ export default function Whitelist() {
 					
 					<div className='row col-md-10 offset-1 top-70 text-center'>
 						<div className='col-6  offset-3'>
-							<img src={require('../Whitelist/img/Beast.png')} className="img-responsive width-450" alt='paid'/> 
+							<img src={require('../Whitelist/img/beast.png')} className="img-responsive width-450" alt='paid'/> 
 						</div>
 					</div>
 					<div className='row col-md-10 offset-1 top-70'>
 						<div className='col-6 top-20'>
-							<img src={require('../Whitelist/img/pomp.png')} className="img-responsive " alt='paid'/> 
+							<img src={require('../Whitelist/img/pomps.png')} className="img-responsive " alt='paid'/> 
 						</div>
 						<div className='col-6 '>
 						<img src={require('../Whitelist/img/logo-1-2.png')} className="img-responsive width-450" alt='paid'/> 

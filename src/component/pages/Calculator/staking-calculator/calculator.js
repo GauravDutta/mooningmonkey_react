@@ -389,14 +389,14 @@ class StakingCalculator extends Component {
     render(){
         return(
             <div className="staking-container">
-              
+               
                 <div className="staking-generat-wrapper">
                     <div className="staking-input-genrat-sec">
                         
                         <div className="clc-top-title">
                         <p>NFT and non NFT holders are welcome to the staking rewards.<br/>Enter your current TAK amount to see your potential rewards. </p>
                         <div></div>
-                        </div>
+						</div>
                         <div className="staking-genrator-sec">
                             <div></div>
                         </div>
